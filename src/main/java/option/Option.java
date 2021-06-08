@@ -5,4 +5,12 @@ public abstract class Option {
     protected String description;
 
     public abstract void executeAction();
+
+    public int getCode() {
+       return code;
+    }
+
+    public String  getDescription() {
+        return description;
+    }
 }

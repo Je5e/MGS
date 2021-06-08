@@ -6,4 +6,5 @@ public interface ISubjectRepository {
     Subject create(Subject subjectToCreate);
     Subject findSubject(int id);
     List<Subject> findAllSubjects();
+    Subject findSubjectByName(String subjectName);
 }
