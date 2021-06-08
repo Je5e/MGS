@@ -1,0 +1,20 @@
+Name	Grade
+------------------------
+Juan	 9
+Martha	 4
+Marcos	 4
+------------------------
+Average: 5.666666666666667
+Min Grade: 4.0
+Max Grade: 9.0
+Most Repeated: 4.0
+Less Repeated: 9.0
+Students with the most repeated grade: 
+Name	Grade
+------------------------
+Martha	4.0
+Marcos	4.0
+Students with the less repeated grade: 
+Name	Grade
+------------------------
+Juan	9.0
