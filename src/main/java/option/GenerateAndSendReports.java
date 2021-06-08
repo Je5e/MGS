@@ -4,9 +4,7 @@ import com.aspose.email.MailAddress;
 import com.aspose.email.MailMessage;
 import com.aspose.email.SmtpClient;
 import data.DataBase;
-import helper.ConverterToFileImp;
-import helper.IConverterFile;
-import helper.StatisticManager;
+import helper.*;
 import start.MainProgram;
 import student.Student;
 import subject.Subject;
@@ -21,11 +19,13 @@ public class GenerateAndSendReports extends Option {
     Scanner scanner = new Scanner(System.in);
     StringBuilder reportDocument = new StringBuilder();
     IConverterFile converterFile;
+    ISenderEmail senderEmail;
 
     public GenerateAndSendReports(Integer code) {
         this.code = code;
         this.description = "Generate and Send Reports.";
         this.converterFile= new ConverterToFileImp();
+        this.senderEmail=new SenderEmailImp();
     }
 
     @Override
@@ -98,31 +98,7 @@ public class GenerateAndSendReports extends Option {
         }
 
         // Send Email
-// Create an instance of the MailMessage class
-        MailMessage message = new MailMessage();
-
-// Set From field, To field and Plain text body
-        message.setFrom(MailAddress.to_MailAddress("ppejalvarado@gmail.com"));
-        message.getTo().add("jese.alvarado@outlook.com");
-        message.setBody(reportDocument.toString());
-
-// Create an instance of the SmtpClient class
-        SmtpClient client = new SmtpClient();
-
-// And Specify your mailing host server, Username, Password and Port
-        client.setHost("smtp.gmail.com");
-        client.setUsername("ppejalvarado@gmail.com");
-        client.setPassword("lllllllllll");
-        client.setPort(587);
-        //client.setSecurityOptions(SecurityOptions.SSLExplicit);
-
-        try {
-            // Client.Send will send this message
-            client.send(message);
-            System.out.println("Message sent");
-        } catch (Exception ex) {
-            System.err.println(ex);
-        }
+        senderEmail.sendEmail(reportDocument.toString());
 
 
     }

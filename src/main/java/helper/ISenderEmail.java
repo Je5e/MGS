@@ -1,5 +1,5 @@
 package helper;
 
 public interface ISenderEmail {
-    public void sendEmail();
+    public void sendEmail(String body);
 }
