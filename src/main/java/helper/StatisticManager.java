@@ -22,7 +22,7 @@ public class StatisticManager {
         Double mostRepeated;
         HashMap<Integer, Double> allFrecuencies = new HashMap<>();
         for (Double key : unique) {
-            int frecuency =Collections.frequency(grades, key);
+            int frecuency = Collections.frequency(grades, key);
             allFrecuencies.put(frecuency, key);
         }
         List<Integer> keys = allFrecuencies.keySet().stream().toList();

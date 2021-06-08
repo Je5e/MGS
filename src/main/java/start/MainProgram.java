@@ -1,8 +1,8 @@
 package start;
 
+import lombok.Data;
 import option.MainMenuOptionsList;
 import option.Option;
-import student.Student;
 import subject.Subject;
 
 import java.util.ArrayList;
@@ -12,13 +12,15 @@ import java.util.Scanner;
 public class MainProgram {
 
     static boolean salir = false;
-    static int counterSubject=0;
-    static List<Subject> subjects=new ArrayList<>();
-    public static void addSubject(Subject newSubject){
+    static int counterSubject = 0;
+    static List<Subject> subjects = new ArrayList<>();
+
+    public static void addSubject(Subject newSubject) {
         newSubject.setId(++counterSubject);
         subjects.add(newSubject);
     }
-   public static List<Subject> getSubjects(){
+
+    public static List<Subject> getSubjects() {
         return subjects;
     }
 
@@ -29,6 +31,17 @@ public class MainProgram {
     public static void main(String[] args) {
         MainProgram p = new MainProgram();
         p.iniciar();
+    }
+
+    public static Subject getSubeject(int id) {
+        Subject result = null;
+        for (Subject subject : subjects) {
+            if (subject.getId() == id) {
+                result = subject;
+                break;
+            }
+        }
+        return result;
     }
 
     // Private methods.
@@ -60,17 +73,6 @@ public class MainProgram {
         System.out.print("Digite: ");
         result = sc.nextInt();
 
-        return result;
-    }
-
-    public static Subject getSubeject(int id){
-        Subject result=null;
-        for (Subject subject:subjects){
-            if (subject.getId()==id){
-                result=subject;
-                break;
-            }
-        }
         return result;
     }
 }

@@ -10,17 +10,17 @@ import java.util.Scanner;
 
 public class FileOperation {
 
-    public static List<Student> getStudentsWithGrades(File file){
+    public static List<Student> getStudentsWithGrades(File file) {
         List<Student> result = new ArrayList<>();
 
         try {
             Scanner reader = new Scanner(file);
 
-                while (reader.hasNext()) {
-                    String line = reader.nextLine();
-                    String[] values = line.split(",");
-                    result.add(new Student(values[0],Integer.parseInt(values[1])) );
-                }
+            while (reader.hasNext()) {
+                String line = reader.nextLine();
+                String[] values = line.split(",");
+                result.add(new Student(values[0], Integer.parseInt(values[1])));
+            }
 
         } catch (FileNotFoundException ex) {
 
