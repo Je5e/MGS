@@ -1,0 +1,22 @@
+math.txt
+Name	Grade
+------------------------
+Carlos	 7
+Manuel	 9
+Rocio	 9
+Manuel	 8
+------------------------
+Average: 8.25
+Min Grade: 7.0
+Max Grade: 9.0
+Most Repeated: 9.0
+Less Repeated: 7.0
+Students with the most repeated grade: 
+Name	Grade
+------------------------
+Manuel	9.0
+Rocio	9.0
+Students with the less repeated grade: 
+Name	Grade
+------------------------
+Carlos	7.0

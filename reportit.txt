@@ -1,0 +1,23 @@
+it.txt
+Name	Grade
+------------------------
+Juan	 9
+Martha	 4
+Marcos	 4
+Manuelita	 9
+Rocio	 6
+------------------------
+Average: 6.4
+Min Grade: 4.0
+Max Grade: 9.0
+Most Repeated: 9.0
+Less Repeated: 6.0
+Students with the most repeated grade: 
+Name	Grade
+------------------------
+Juan	9.0
+Manuelita	9.0
+Students with the less repeated grade: 
+Name	Grade
+------------------------
+Rocio	6.0
